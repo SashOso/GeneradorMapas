@@ -1,0 +1,75 @@
+:root{
+    --color_0:#272727;
+    --color_1:#525252;
+    --color_2:#525252;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    overflow: hidden;
+    background-color: var(--color_0);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+        'barra_menu barra_menu'
+        'barra_herramientas area_trabajo'
+        'barra_herramientas barra_estado'
+    ;
+}
+
+.barra_menu{
+    grid-area: barra_menu;
+    background-color: var(--color_1);
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+.barra_herramientas{
+    grid-area: barra_herramientas;
+    background-color: var(--color_1);
+    width: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.barra_estado{
+    grid-area: barra_estado;
+    background-color: var(--color_2);
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+.area_trabajo{
+    grid-area: area_trabajo;
+    overflow: hidden;
+}
+canvas{
+    display: block;
+    grid-area: canvas;
+    background-color: white;
+    min-height: 0px;
+    min-width: 0px;
+}
+
+button{
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.btn_select{
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}

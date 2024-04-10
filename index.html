@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="barra_menu">
+        <button><i class="fa-solid fa-file"></i></button>
+        <button><i class="fa-solid fa-folder-open" onclick="Importar()"></i></button>
+        <button><i class="fa-solid fa-floppy-disk" onclick="Exportar()"></i></button>
+        <button><i class="fa-solid fa-code"></i></button>
+        <button><i class="fa-solid fa-gear"></i></button>
+    </section>
+
+    <section class="barra_herramientas">
+        <button id="btn_flecha" class="btn_select"><i class="fa-solid fa-arrow-pointer"></i></button>
+        <button id="btn_lapiz"><i class="fa-solid fa-pen"></i></button>
+        <button id="btn_selector"><i class="fa-solid fa-eye-dropper"></i></button>
+        <button id="btn_relleno"><i class="fa-solid fa-fill-drip"></i></button>
+    </section>
+    
+    <section class="area_trabajo">
+        <canvas id="canvas"></canvas>
+    </section>
+
+    <section class="barra_estado">
+
+    </section>
+<script src="script.js"></script>
+<script src="canvas.js"></script>
+</body>
+</html>
