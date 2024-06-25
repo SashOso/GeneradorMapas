@@ -8,6 +8,7 @@ var alto=720;
 var ux=128;
 var uy=72;
 
+var guia=true;
 
 setInterval(() => {
     filas=data.map.length;
@@ -32,18 +33,20 @@ setInterval(() => {
         }
     }
     //dibujar lineas
-    ctx.strokeStyle="#323232"
-    for (let i = 1; i < ancho; i++) {
-        ctx.beginPath();
-        ctx.moveTo(ux*i, 0);
-        ctx.lineTo(ux*i, alto);
-        ctx.stroke();
-    }
-    for (let i = 1; i < alto; i++) {
-        ctx.beginPath();
-        ctx.moveTo(0,uy*i);
-        ctx.lineTo(ancho, uy*i);
-        ctx.stroke();
+    if(guia){
+        ctx.strokeStyle="#323232"
+        for (let i = 1; i < ancho; i++) {
+            ctx.beginPath();
+            ctx.moveTo(ux*i, 0);
+            ctx.lineTo(ux*i, alto);
+            ctx.stroke();
+        }
+        for (let i = 1; i < alto; i++) {
+            ctx.beginPath();
+            ctx.moveTo(0,uy*i);
+            ctx.lineTo(ancho, uy*i);
+            ctx.stroke();
+        }
     }
 }, 1000/60);
 ////////////////////////////////////////////---HERRAMIENTAS---///////////////////////////////////////////////////////////////////
@@ -144,7 +147,12 @@ let btn_flecha=document.getElementById("btn_flecha");
 let btn_lapiz=document.getElementById("btn_lapiz");
 let btn_selector=document.getElementById("btn_selector");
 let btn_relleno=document.getElementById("btn_relleno");
+let btn_guia=document.getElementById("btn_guia");
 
+
+btn_guia.addEventListener("click",function(){
+    guia=!guia;
+})
 
 btn_flecha.addEventListener("click",function(e){
     btn_flecha.setAttribute("class","btn_select")
