@@ -234,6 +234,7 @@ btn_agregar_color.addEventListener("click", function() {
     input_color.addEventListener("input", function() {
         let color_seleccionado = input_color.value;
         data.color.push(color_seleccionado);
+        color=data.color.length-1;
         Actualizar_Colores();
 
         document.body.removeChild(input_color);
