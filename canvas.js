@@ -28,7 +28,7 @@ setInterval(() => {
         for (let j = 0; j < columnas; j++) {
             if(data.map[i][j]!=0){
                 ctx.fillStyle = data.color[data.map[i][j]];
-                ctx.fillRect(j*ux, i*uy, ux, uy);
+                ctx.fillRect(j*ux, i*uy, ux+1, uy+1);
             }
         }
     }
