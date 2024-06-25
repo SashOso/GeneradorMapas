@@ -27,6 +27,10 @@ function Importar(){
                 const contenido=e.target.result
                 //-----------////
                 data=JSON.parse(contenido)
+                if(data.color.length>=2){
+                    color=1;
+                }
+                Actualizar_Colores();
                 //-----------////
             }
             reader.readAsText(archivo)
