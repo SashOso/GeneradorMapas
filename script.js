@@ -12,7 +12,7 @@ data={
         [0,0,0,0,0,0,0,0,0,0],
         [0,0,0,0,0,0,0,0,0,0]
     ],
-    color:["#fff","#000"]
+    color:["#ffffff","#000000"]
 }
 
 function Importar(){  
@@ -37,13 +37,19 @@ function Importar(){
 }
 
 
+
+
 function Exportar() {
     const a = document.createElement("a");
     const contenido = JSON.stringify(data),
         blob = new Blob([contenido], {type: "octet/stream"}),
         url = window.URL.createObjectURL(blob);
     a.href = url;
-    a.download = data.name+".json";
+    a.download = data.name+".atch";
     a.click();
     window.URL.revokeObjectURL(url);
 };
+
+
+
+
